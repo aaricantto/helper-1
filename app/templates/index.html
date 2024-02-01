@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script Helper Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Other CSS files as needed -->
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <div id="app" class="app-container">
+        <!-- Explorer Column -->
+        <div class="flex-item">
+            <h2>Explorer</h2>
+            <div class="content">
+                {% include 'explorer.html' %}
+            </div>
+        </div>
+        <!-- Selected Scripts Column -->
+        <div class="flex-item">
+            <h2>Selected</h2>
+            <div class="content">
+                {% include 'selected.html' %}
+            </div>
+        </div>
+        <!-- Utility Column -->
+        <div class="flex-item utility-container">
+            <h2>Utility</h2>
+            <div class="content">
+                <!-- This section goes inside the Utility column -->
+                <div class="utility-actions">
+                    <button id="copy-to-clipboard-button" class="utility-button">Copy to Clipboard</button>
+                    <!-- Add any additional buttons or features you might want in the future -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/explorer.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <!-- Other JS files as needed -->
+</body>
+</html>

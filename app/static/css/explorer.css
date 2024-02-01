@@ -1,0 +1,56 @@
+/* File explorer styles */
+#file-explorer {
+    width: 60%;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    overflow-y: auto;
+}
+
+.folder, .file {
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #eee;
+    cursor: pointer;
+}
+
+.folder:hover, .file:hover {
+    background-color: #f0f0f0;
+}
+
+/* File and folder icons */
+.file-icon {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+#path-display {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #e9e9e9;
+    border-bottom: 1px solid #ddd;
+}
+
+#back-button {
+    /* Removing margins and padding that might affect layout */
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#current-path-display {
+    flex-grow: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.back-path-wrapper {
+    display: flex; /* This creates a flex context for the back button and path text */
+    align-items: center; /* This will align the items on the same line */
+}

@@ -1,0 +1,108 @@
+/* Main layout styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+}
+
+.app-container {
+    display: flex;
+    padding: 20px;
+    gap: 10px; /* Adds space between flex items */
+    height: calc(100vh - 40px);
+}
+
+.flex-item {
+    flex: 1; /* Each flex item takes up an equal amount of space */
+    background: #fff;
+    border: 1px solid #ddd;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Stretches child elements to fill the width */
+    box-sizing: border-box; /* Include padding and border in the element's width and height */
+}
+
+.flex-item:not(:last-child) {
+    border-right: none; /* Remove the right border for all items except the last one */
+}
+
+/* Flex item container */
+.flex-item > h2 {
+    background: #e9e9e9;
+    padding: 10px;
+    margin: 0; /* Remove default margin */
+    border-bottom: 1px solid #ddd;
+    text-align: center; /* Center the text */
+}
+
+/* Style for individual file/folder entries */
+.file, .folder {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    padding: 5px 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* SVG image style */
+/* Ensures SVG files are properly sized and do not overflow */
+.file-icon {
+    width: 20px; /* Adjust the width as necessary */
+    height: auto; /* Keep the aspect ratio */
+    margin-right: 8px;
+}
+
+
+/* Content area inside each flex item */
+.content {
+    padding: 10px;
+    overflow: auto; /* Adds scrollbar if content overflows */
+}
+
+/* Style for individual file/folder entries */
+.file, .folder {
+    padding: 5px 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Style for selected file */
+.selected-file {
+    background-color: #e0e0e0;
+}
+
+
+.navbar {
+    display: flex; /* Use flexbox to align items */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    /* Rest of your styles for navbar */
+  }
+  
+  /* If you have an h1 inside the navbar, you can also center the text within that */
+  .navbar h1 {
+    text-align: center;
+    width: 100%; /* Allow the h1 to take the full width */
+  }
+  
+  /* Reuse the explorer styles for selected files */
+#selected-scripts-list .file {
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    cursor: default; /* Change cursor style if needed */
+}
+
+#selected-scripts-list .file-icon {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
